@@ -21,7 +21,7 @@ get '/token' do
   identity = Faker::Internet.user_name
 
   # Create a unique ID for the currently connecting device
-  endpoint_id = "TwilioChat:#{identity}:#{device_id}"
+  endpoint_id = "TwilioDemoApp:#{identity}:#{device_id}"
 
   # Create an Access Token for IP messaging usage
   token = Twilio::Util::AccessToken.new ENV['TWILIO_ACCOUNT_SID'],
